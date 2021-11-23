@@ -6,7 +6,7 @@
 /*   By: jpozuelo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 19:21:12 by jpozuelo          #+#    #+#             */
-/*   Updated: 2021/10/26 12:58:41 by jpozuelo         ###   ########.fr       */
+/*   Updated: 2021/11/23 14:35:30 by jpozuelo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s, char const *set)
 	i = 0;
 	while (i == 0)
 	{
-		if (first == last)
+		if (first == last && in_set(s[first], set))
 			return (ft_strdup(""));
 		if (in_set(s[first], set))
 			first++;
